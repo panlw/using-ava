@@ -5,7 +5,7 @@
   "main": "test.js",
   "scripts": {
     "test": "ava -v",
-    "cover": "nyc ava"
+    "cover": "nyc ava > build/coverage.lcov && codecov --token=:190be4ab-c02a-4c42-a615-e0ef8f96a84d"
   },
   "author": "panlw@yeah.net",
   "license": "MIT",
@@ -13,6 +13,7 @@
     "ava": "^0.18.2",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
+    "codecov": "^1.0.1",
     "nyc": "^10.1.2"
   },
   "directories": {
@@ -48,8 +49,7 @@
   },
   "nyc": {
     "reporter": [
-      "lcov",
-      "text",
+      "text-lcov",
       "html"
     ],
     "report-dir": "build/coverage"
