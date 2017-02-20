@@ -1,0 +1,57 @@
+{
+  "name": "ava-test",
+  "version": "1.0.0",
+  "description": "Using AVA",
+  "main": "test.js",
+  "scripts": {
+    "test": "ava -v",
+    "cover": "nyc ava"
+  },
+  "author": "panlw@yeah.net",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "nyc": "^10.1.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panlw/using-ava.git"
+  },
+  "keywords": [
+    "ava",
+    "nyc",
+    "babel",
+    "es2015"
+  ],
+  "bugs": {
+    "url": "https://github.com/panlw/using-ava/issues"
+  },
+  "homepage": "https://github.com/panlw/using-ava#readme",
+  "ava": {
+    "files": [
+      "src/**/__tests__/*-test.js"
+    ],
+    "babel": "inherit",
+    "require": [
+      "./test/helpers/setup-test-env.js"
+    ],
+    "tap": false,
+    "failFast": true,
+    "powerAssert": true,
+    "concurrency": 2
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text",
+      "html"
+    ],
+    "report-dir": "build/coverage"
+  }
+}
