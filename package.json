@@ -1,5 +1,5 @@
 {
-  "name": "ava-test",
+  "name": "using-ava",
   "version": "1.0.0",
   "description": "Using AVA",
   "main": "test.js",
@@ -14,15 +14,14 @@
   "devDependencies": {
     "ava": "^0.18.2",
     "babel-preset-es2015": "^6.22.0",
-    "babel-preset-stage-2": "^6.22.0",
     "codecov": "^1.0.1",
     "nyc": "^10.1.2",
     "opn-cli": "^3.1.0"
   },
+  "dependencies": {},
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/panlw/using-ava.git"
